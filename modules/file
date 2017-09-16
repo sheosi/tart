@@ -1,0 +1,541 @@
+Hint: used config file '/opt/nim-0.17.2/config/nim.cfg' [Conf]
+Hint: system [Processing]
+Hint: graphics2d [Processing]
+Hint: window [Processing]
+window.nim(1, 8) Error: cannot open 'atomicwrapper'
+Hint: basetypes [Processing]
+Hint: al [Processing]
+Hint: macros [Processing]
+Hint: strutils [Processing]
+Hint: parseutils [Processing]
+Hint: math [Processing]
+Hint: algorithm [Processing]
+Hint: os [Processing]
+Hint: times [Processing]
+Hint: posix [Processing]
+Hint: ospaths [Processing]
+window.nim(4, 8) Error: cannot open 'tartapi'
+window.nim(5, 6) Error: cannot open 'scheduler'
+window.nim(8, 15) Error: undeclared identifier: 'Atomic'
+window.nim(8, 21) Error: no generic parameters allowed for Atomic
+window.nim(19, 28) Error: undeclared identifier: 'Job'
+window.nim(19, 41) Error: invalid pragma: onEvent: "Game Init"
+window.nim(25, 17) Error: attempting to call undeclared routine: 'value='
+window.nim(25, 17) Error: attempting to call undeclared routine: '.='
+window.nim(25, 17) Error: expression '.=' cannot be called
+window.nim(25, 10) Error: undeclared field: 'value'
+window.nim(25, 10) Error: undeclared field: '.'
+window.nim(25, 10) Error: expression '.' cannot be called
+window.nim(25, 10) Error: '' cannot be assigned to
+window.nim(27, 13) Error: undeclared field: 'value'
+window.nim(27, 13) Error: undeclared field: '.'
+window.nim(27, 13) Error: expression '.' cannot be called
+window.nim(38, 36) Error: undeclared field: 'value'
+window.nim(38, 36) Error: undeclared field: '.'
+window.nim(38, 36) Error: expression '.' cannot be called
+window.nim(47, 40) Error: invalid pragma: onEvent: "tmp frame render"
+window.nim(51, 10) Error: undeclared identifier: 'schedRunning'
+window.nim(51, 10) Error: 'schedRunning' cannot be assigned to
+window.nim(49, 28) Warning: Cannot prove that 'event' is initialized. This will become a compile time error in the future. [ProveInit]
+window.nim(54, 46) Error: invalid pragma: onEvent: "Game End"
+window.nim(56, 10) Error: undeclared field: 'value'
+window.nim(56, 10) Error: undeclared field: '.'
+window.nim(56, 10) Error: expression '.' cannot be called
+window.nim(19, 6) Hint: 'window.initAllegro(self: ptr Error Type)[declared in window.nim(19, 5)]' is declared but not used [XDeclaredButNotUsed]
+window.nim(47, 6) Hint: 'window.emptyQueue(self: ptr Error Type)[declared in window.nim(47, 5)]' is declared but not used [XDeclaredButNotUsed]
+window.nim(54, 6) Hint: 'window.terminateDisplay(self: ptr Error Type)[declared in window.nim(54, 5)]' is declared but not used [XDeclaredButNotUsed]
+graphics2d.nim(3, 8) Error: cannot open 'tartapi'
+Hint: render2d [Processing]
+graphics2d.nim(5, 8) Error: cannot open 'rtArray'
+graphics2d.nim(6, 8) Error: cannot open 'sharedtable'
+Hint: locks [Processing]
+graphics2d.nim(8, 8) Error: cannot open 'maybe'
+graphics2d.nim(9, 8) Error: cannot open 'job'
+graphics2d.nim(10, 8) Error: cannot open 'atomicwrapper'
+graphics2d.nim(16, 8) Error: cannot export: atomicwrapper
+graphics2d.nim(39, 41) Error: undeclared identifier: 'RtArray'
+graphics2d.nim(39, 48) Error: no generic parameters allowed for RtArray
+graphics2d.nim(40, 43) Error: no generic parameters allowed for RtArray
+graphics2d.nim(41, 43) Error: no generic parameters allowed for RtArray
+graphics2d.nim(42, 31) Error: no generic parameters allowed for RtArray
+graphics2d.nim(52, 23) Error: no generic parameters allowed for RtArray
+graphics2d.nim(54, 18) Error: undeclared identifier: 'SharedTableAtomic'
+graphics2d.nim(54, 35) Error: no generic parameters allowed for SharedTableAtomic
+graphics2d.nim(64, 30) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(64, 30) Error: expression 'nextIndex[layer]' has no type (or is ambiguous)
+graphics2d.nim(65, 7) Error: invalid type: 'range 0..268435455(Error Type)'
+graphics2d.nim(66, 16) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(66, 7) Error: type mismatch: got (void)
+but expected one of: 
+proc inc[T: Ordinal | uint | uint64](x: var T; y = 1)
+
+graphics2d.nim(70, 48) Error: type mismatch: got (uint, range 0..268435455(Error Type))
+but expected one of: 
+proc `or`[T: SomeUnsignedInt](x, y: T): T
+proc `or`(a, b: typedesc): typedesc
+proc `or`(x, y: int16): int16
+proc `or`(x, y: int32): int32
+proc `or`(x, y: int64): int64
+proc `or`(x, y: int): int
+proc `or`(x, y: bool): bool
+proc `or`(x, y: int8): int8
+
+graphics2d.nim(70, 12) Error: expression cannot be cast to Sprite=uint
+graphics2d.nim(73, 14) Error: type mismatch: got ()
+but expected one of: 
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[int]; b: openArray[T])
+proc `[]=`(s: var string; x: Slice[int]; b: string)
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[Idx]; b: openArray[T])
+proc `[]=`[I: Ordinal; T, S](a: T; i: I; x: S)
+proc `[]=`[T](s: var seq[T]; x: Slice[int]; b: openArray[T])
+
+graphics2d.nim(79, 24) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(79, 7) Error: type mismatch: got (void)
+but expected one of: 
+proc inc[T: Ordinal | uint | uint64](x: var T; y = 1)
+
+graphics2d.nim(81, 61) Error: undeclared identifier: '?'
+graphics2d.nim(81, 73) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(81, 73) Error: expression 'bitmapTable[uint32(result)]' has no type (or is ambiguous)
+graphics2d.nim(81, 61) Error: attempting to call undeclared routine: '?'
+graphics2d.nim(81, 61) Error: attempting to call undeclared routine: '?'
+graphics2d.nim(81, 61) Error: expression '?' cannot be called
+graphics2d.nim(92, 33) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(92, 33) Error: expression 'bitmapTable[index]' has no type (or is ambiguous)
+graphics2d.nim(92, 40) Error: undeclared field: 'unbox'
+graphics2d.nim(92, 40) Error: undeclared field: '.'
+graphics2d.nim(92, 40) Error: expression '.' cannot be called
+graphics2d.nim(93, 21) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(93, 21) Error: expression 'layersX[layer]' has no type (or is ambiguous)
+graphics2d.nim(100, 33) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(100, 33) Error: expression 'bitmapTable[index]' has no type (or is ambiguous)
+graphics2d.nim(100, 40) Error: undeclared field: 'unbox'
+graphics2d.nim(100, 40) Error: undeclared field: '.'
+graphics2d.nim(100, 40) Error: expression '.' cannot be called
+graphics2d.nim(101, 21) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(101, 21) Error: expression 'layersY[layer]' has no type (or is ambiguous)
+graphics2d.nim(108, 33) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(108, 33) Error: expression 'bitmapTable[index]' has no type (or is ambiguous)
+graphics2d.nim(108, 40) Error: undeclared field: 'unbox'
+graphics2d.nim(108, 40) Error: undeclared field: '.'
+graphics2d.nim(108, 40) Error: expression '.' cannot be called
+graphics2d.nim(109, 26) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(109, 26) Error: expression 'layersBitmap[layer]' has no type (or is ambiguous)
+graphics2d.nim(116, 33) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(116, 33) Error: expression 'bitmapTable[index]' has no type (or is ambiguous)
+graphics2d.nim(116, 40) Error: undeclared field: 'unbox'
+graphics2d.nim(116, 40) Error: undeclared field: '.'
+graphics2d.nim(116, 40) Error: expression '.' cannot be called
+graphics2d.nim(117, 12) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(117, 12) Error: expression 'layersX[layer]' has no type (or is ambiguous)
+graphics2d.nim(117, 19) Error: type mismatch: got ()
+but expected one of: 
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[int]; b: openArray[T])
+proc `[]=`(s: var string; x: Slice[int]; b: string)
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[Idx]; b: openArray[T])
+proc `[]=`[I: Ordinal; T, S](a: T; i: I; x: S)
+proc `[]=`[T](s: var seq[T]; x: Slice[int]; b: openArray[T])
+
+graphics2d.nim(124, 33) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(124, 33) Error: expression 'bitmapTable[index]' has no type (or is ambiguous)
+graphics2d.nim(124, 40) Error: undeclared field: 'unbox'
+graphics2d.nim(124, 40) Error: undeclared field: '.'
+graphics2d.nim(124, 40) Error: expression '.' cannot be called
+graphics2d.nim(125, 12) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(125, 12) Error: expression 'layersY[layer]' has no type (or is ambiguous)
+graphics2d.nim(125, 19) Error: type mismatch: got ()
+but expected one of: 
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[int]; b: openArray[T])
+proc `[]=`(s: var string; x: Slice[int]; b: string)
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[Idx]; b: openArray[T])
+proc `[]=`[I: Ordinal; T, S](a: T; i: I; x: S)
+proc `[]=`[T](s: var seq[T]; x: Slice[int]; b: openArray[T])
+
+graphics2d.nim(139, 31) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(139, 31) Error: expression 'bitmapTable[index]' has no type (or is ambiguous)
+graphics2d.nim(139, 38) Error: undeclared field: 'unbox'
+graphics2d.nim(139, 38) Error: undeclared field: '.'
+graphics2d.nim(139, 38) Error: expression '.' cannot be called
+graphics2d.nim(142, 17) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(142, 17) Error: expression 'layersBitmap[layer]' has no type (or is ambiguous)
+graphics2d.nim(142, 24) Error: type mismatch: got ()
+but expected one of: 
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[int]; b: openArray[T])
+proc `[]=`(s: var string; x: Slice[int]; b: string)
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[Idx]; b: openArray[T])
+proc `[]=`[I: Ordinal; T, S](a: T; i: I; x: S)
+proc `[]=`[T](s: var seq[T]; x: Slice[int]; b: openArray[T])
+
+graphics2d.nim(152, 30) Error: undeclared identifier: 'Job'
+graphics2d.nim(152, 44) Error: invalid pragma: onEvent: "Main Init"
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(154, 20) Error: undeclared identifier: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(154, 38) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(154, 30) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(154, 48) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(154, 48) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(154, 48) Error: expression 'newRtArray[RtArray[PBitmap]]' cannot be called
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(155, 33) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(155, 25) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(155, 41) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(155, 41) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(155, 41) Error: expression 'newRtArray[RtArray[float]]' cannot be called
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(156, 33) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(156, 25) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(156, 41) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(156, 41) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(156, 41) Error: expression 'newRtArray[RtArray[float]]' cannot be called
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(157, 36) Error: undeclared identifier: 'Atomic'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(157, 42) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(157, 35) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(157, 51) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(157, 51) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(157, 51) Error: expression 'newRtArray[Atomic[uint16]]' cannot be called
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(160, 35) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(160, 44) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(160, 44) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(160, 44) Error: expression 'newRtArray[PBitmap]' cannot be called
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(160, 19) Error: type mismatch: got ()
+but expected one of: 
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[int]; b: openArray[T])
+proc `[]=`(s: var string; x: Slice[int]; b: string)
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[Idx]; b: openArray[T])
+proc `[]=`[I: Ordinal; T, S](a: T; i: I; x: S)
+proc `[]=`[T](s: var seq[T]; x: Slice[int]; b: openArray[T])
+
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(161, 30) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(161, 37) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(161, 37) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(161, 37) Error: expression 'newRtArray[float]' cannot be called
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(161, 14) Error: type mismatch: got ()
+but expected one of: 
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[int]; b: openArray[T])
+proc `[]=`(s: var string; x: Slice[int]; b: string)
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[Idx]; b: openArray[T])
+proc `[]=`[I: Ordinal; T, S](a: T; i: I; x: S)
+proc `[]=`[T](s: var seq[T]; x: Slice[int]; b: openArray[T])
+
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(162, 30) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(162, 37) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(162, 37) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(162, 37) Error: expression 'newRtArray[float]' cannot be called
+graphics2d.nim(153, 12) template/generic instantiation from here
+graphics2d.nim(162, 14) Error: type mismatch: got ()
+but expected one of: 
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[int]; b: openArray[T])
+proc `[]=`(s: var string; x: Slice[int]; b: string)
+proc `[]=`[Idx, T](a: var array[Idx, T]; x: Slice[Idx]; b: openArray[T])
+proc `[]=`[I: Ordinal; T, S](a: T; i: I; x: S)
+proc `[]=`[T](s: var seq[T]; x: Slice[int]; b: openArray[T])
+
+graphics2d.nim(165, 25) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(165, 31) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(165, 31) Error: attempting to call undeclared routine: 'newRtArray'
+graphics2d.nim(165, 31) Error: expression 'newRtArray[uint]' cannot be called
+graphics2d.nim(170, 36) Error: invalid pragma: onEvent: "tmp frame render"
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(184, 28) Error: undeclared field: 'value'
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(184, 28) Error: undeclared field: '.'
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(184, 28) Error: expression '.' cannot be called
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(187, 39) Error: undeclared field: 'size'
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(187, 39) Error: undeclared field: '.'
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(187, 39) Error: expression '.' cannot be called
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(190, 35) Error: undeclared field: 'value'
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(190, 35) Error: undeclared field: '.'
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(190, 35) Error: expression '.' cannot be called
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(193, 54) Error: undeclared field: 'value'
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(193, 54) Error: undeclared field: '.'
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(193, 54) Error: expression '.' cannot be called
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(195, 51) Error: undeclared field: 'value'
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(195, 51) Error: undeclared field: '.'
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(195, 51) Error: expression '.' cannot be called
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(197, 41) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(197, 41) Error: expression 'layersBitmap[nLayer][nImg]' has no type (or is ambiguous)
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(198, 34) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(198, 34) Error: expression 'layersX[nLayer][nImg]' has no type (or is ambiguous)
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(199, 34) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(181, 12) template/generic instantiation from here
+graphics2d.nim(199, 34) Error: expression 'layersY[nLayer][nImg]' has no type (or is ambiguous)
+graphics2d.nim(217, 41) Error: invalid pragma: onEvent: "Game End"
+graphics2d.nim(220, 19) Error: type mismatch: got ()
+but expected one of: 
+proc `[]`[T](s: seq[T]; x: Slice[int]): seq[T]
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[int]): seq[T]
+proc `[]`[I: Ordinal; T](a: T; i: I): T
+proc `[]`(s: string; x: Slice[int]): string
+proc `[]`[Idx, T](a: array[Idx, T]; x: Slice[Idx]): seq[T]
+
+graphics2d.nim(220, 19) Error: expression 'layersBitmap[i]' has no type (or is ambiguous)
+graphics2d.nim(217, 6) Hint: 'graphics2d.terminate(self: ptr Error Type)[declared in graphics2d.nim(217, 5)]' is declared but not used [XDeclaredButNotUsed]
+graphics2d.nim(170, 6) Hint: 'graphics2d.draw(self: ptr Error Type)[declared in graphics2d.nim(170, 5)]' is declared but not used [XDeclaredButNotUsed]
