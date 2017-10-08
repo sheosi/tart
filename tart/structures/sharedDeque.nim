@@ -6,7 +6,7 @@ type SharedDeque*[Size:static[int], T] = tuple
   baseArray: array[Size,T]
 
 
-template sharedDequeDecl*(name: expr, Size: int ,T: typedesc) =
+template sharedDequeDecl*(name: untyped, Size: int ,T: typedesc) =
   alignedVar(name,SharedDeque[Size,T],2)
 
 template accessIndex*[T](size: int ,num: T): T =
@@ -16,7 +16,7 @@ template accessIndex*[T](size: int ,num: T): T =
     num mod size
 
 #The value which serves us as 0
-template universalNil*(T: typedesc): expr =
+template universalNil*(T: typedesc): untyped =
   when T is ptr any or T is pointer:
     nil
   else: 0
@@ -43,7 +43,7 @@ proc pop*[Size:static[int], T](self: var SharedDeque[Size,T]): T =
 
     if t <= b:
         # non-empty queue
-        let accIndex = accessIndex[T](Size,b).uint16
+        let accIndex = accessIndex[uint16](Size,b)
         result = self.baseArray[ accIndex  ]
         if t != b:
           # there's still more than one item left in the queue
@@ -67,10 +67,10 @@ proc steal*[Size: static[int],T] (self: var SharedDeque[Size, T]): T =
     var b = self.bottom.value
     if t < b:
         # non-empty queue
-        result = self.baseArray[ accessIndex[T](Size,t).uint16]
+        result = self.baseArray[ accessIndex[uint16](Size,t).uint16]
 
         if not self.top.compareExchange(t+1,t,  MemOrder.Relaxed):
-            # a concurrent steal or pop operation removed an element from the 
+            # a concurrent steal or pop operation removed an element from the
             # deque in the meantime.
 
             result = universalNil(T)

@@ -40,4 +40,4 @@ proc allocSharedDynArray*[T](size: Natural): ptr DynArray[T] =
   result = cast[ptr DynArray[T]]( arrayPointer )
 
 proc isPowerOfTwo*(num :uint32): bool =
-  bool  ((num and not (num and (num - 1))) == num)
+  bool((num and not (num and (num - 1))) == num)

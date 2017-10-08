@@ -15,7 +15,7 @@ when defined(msvc):
 const someGcc = defined(gcc) or defined(llvm_gcc) or defined(clang)
 
 
-template alignedVar* (name: expr, T: typedesc, alignment: int): stmt {.immediate.}  =
+template alignedVar* (name: typed, T: typedesc, alignment: int): untyped  =
   when someGcc:
     when alignment == 1:
       var name: T
@@ -39,7 +39,7 @@ template alignedVar* (name: expr, T: typedesc, alignment: int): stmt {.immediate
     {.warning: "Unknown compiler alignment not guaranteed".}
     var name: Atomic[T]
 
-template atomicVar* (name: expr, T: typedesc) =
+template atomicVar* (name: typed, T: typedesc) =
   alignedVar(name, T, sizeof(T))
 
 converter getRelaxed*[T](val: var Atomic[T]): T {.inline.}=
@@ -63,9 +63,6 @@ proc `value=`*[T](val: var Atomic[T],  newVal: T) =
     MsvcProtectRelease: val = cast[Atomic[T]](newVal)
 
   else: {.fatal: "Atomic setter not implemented for this platform"}
-
-
-
 
 proc `value=`*[T](val: var Atomic[T],  valOrder: ValOrderTuple[T]) =
   when someGcc:
@@ -277,17 +274,17 @@ when isMainModule:
 
   suite "AtomicWrapper":
     test "Check MemOrder constants":
-      assert (MemOrder.Relaxed.cint == ATOMIC_RELAXED.cint)
-      assert (MemOrder.Consume.cint == ATOMIC_CONSUME.cint)
-      assert (MemOrder.Acquire.cint == ATOMIC_ACQUIRE.cint)
-      assert (MemOrder.Release.cint == ATOMIC_RELEASE.cint)
-      assert (MemOrder.AcqRel .cint == ATOMIC_ACQ_REL.cint)
-      assert (MemOrder.SeqCst .cint == ATOMIC_SEQ_CST.cint)
+      assert(MemOrder.Relaxed.cint == ATOMIC_RELAXED.cint)
+      assert(MemOrder.Consume.cint == ATOMIC_CONSUME.cint)
+      assert(MemOrder.Acquire.cint == ATOMIC_ACQUIRE.cint)
+      assert(MemOrder.Release.cint == ATOMIC_RELEASE.cint)
+      assert(MemOrder.AcqRel .cint == ATOMIC_ACQ_REL.cint)
+      assert(MemOrder.SeqCst .cint == ATOMIC_SEQ_CST.cint)
 
     test "Increment 'inc'":
       alignedVar(someVal,Atomic[int],4)
       #var someVal: Atomic[int]
       someVal.value = 3
       inc someVal
-      assert (someVal.value == 4)
+      assert(someVal.value == 4)
 

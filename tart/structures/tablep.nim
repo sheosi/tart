@@ -6,10 +6,11 @@ type
   TableP* [S: static[int],T] = object
     allJobsFinishedCallback : Atomic[pointer]
     data: array[S,Atomic[pointer]]
-    when (0..255).contains(S):
-      elements: Atomic[uint8]
-    else :
-      elements: Atomic[uint16]
+    elements: Atomic[uint16] #NOTE: This used to change depending on size, but current nim wont allow this
+    #when S > 0 and S <= 255:
+    #  elements: Atomic[uint8]
+    #else :
+
 
 proc `whenJobsFinished=`*[S,T](self: var TableP[S,T], newVal: T) {.inline.}=
   `value=`(self.allJobsFinishedCallback, cast[pointer](newVal))

@@ -60,7 +60,7 @@ proc isEmpty*(job: ptr Job): bool {.inline.} =
 proc execute*(self: ptr Job){.gcsafe.}
 
 proc finish*(job: ptr Job) =
-  let unfinishedJobs = decVal (job.unfinishedJobs, 1, MemOrder.SeqCst)
+  let unfinishedJobs = decVal(job.unfinishedJobs, 1, MemOrder.SeqCst)
 
   # if we have one job left and this is called it means that a child did,
   # so check if should add ourselves.
